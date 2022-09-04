@@ -185,11 +185,11 @@ UPROGS=\
 	_hcat\
 	_ssu_login\
 
-#fs.img: mkfs list.txt $(UPROGS)
-#	./mkfs fs.img list.txt $(UPROGS)
+fs.img: mkfs list.txt $(UPROGS)
+	./mkfs fs.img list.txt $(UPROGS)
 
-fs.img: mkfs README $(UPROGS)
-	./mkfs fs.img README $(UPROGS)
+#fs.img: mkfs README $(UPROGS)
+#	./mkfs fs.img README $(UPROGS)
 
 -include *.d
 

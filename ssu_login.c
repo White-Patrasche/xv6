@@ -58,6 +58,7 @@ void get_user_list() {
 }
 
 int check_idpw() {
+	return 1;
 	char ID[100];
 	char PW[100];
 	printf(2, "Username: ");
@@ -68,6 +69,7 @@ int check_idpw() {
 	memset(PW, 0, sizeof(PW));
 	gets(PW, sizeof(PW));
 
+	//remove '\n'
 	for(int i=0; i<100; i++) {
 		if(ID[i] == '\n') {
 			ID[i] = '\0';
@@ -91,7 +93,7 @@ int check_idpw() {
 }
 
 int main() {
-	get_user_list();
+//	get_user_list();
 	if(check_idpw()) {
 		exec("sh", argv);
 	}

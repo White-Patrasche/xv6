@@ -186,7 +186,7 @@ UPROGS=\
 	_ssu_login\
 
 fs.img: mkfs list.txt $(UPROGS)
-	./mkfs fs.img list.txt $(UPROGS)
+	./mkfs fs.img list.txt README $(UPROGS)
 
 #fs.img: mkfs README $(UPROGS)
 #	./mkfs fs.img README $(UPROGS)

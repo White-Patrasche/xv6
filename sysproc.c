@@ -7,6 +7,16 @@
 #include "mmu.h"
 #include "proc.h"
 
+int 
+sys_memsize(void)
+{
+	uint size;
+	struct proc* PROC;
+	PROC = myproc();
+	size = PROC->sz;
+	return size;
+}
+
 int
 sys_fork(void)
 {

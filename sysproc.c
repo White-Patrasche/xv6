@@ -17,6 +17,18 @@ sys_memsize(void)
 	return size;
 }
 
+//trace process
+int
+sys_trace(void) {
+	int mask;
+	if(argint(0, &mask) < 0)
+		return -1;
+	myproc()->tracemask = mask;
+	//if(argint(0, &myproc()->tracemask) < 0)
+	//	return -1;
+	return 0;
+}
+
 int
 sys_fork(void)
 {
